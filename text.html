@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+            color: rgb(25, 25, 25);
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
+    <div class="marquee">
+         <div class="marquee-content">
+            <span id="scrolling-text">‎ ✅ Marca reconhecia   ‎ ✅ Rendimento financeiro   ‎ ✅ Suporte contínuo Especializado   ‎ ✅
+                Engenharia especializada   ‎ ✅ Modelo de négocio aprovado no mercado   ‎ ✅ Serviço de qualidade   ‎ ✅ Inovação e
+                tecnologia </span>
+            <span id="scrolling-text">‎ ✅ Marca reconhecia   ‎ ✅ Rendimento financeiro   ‎ ✅ Suporte contínuo Especializado   ‎ ✅
+                Engenharia especializada   ‎ ✅ Modelo de négocio aprovado no mercado   ‎ ✅ Serviço de qualidade   ‎ ✅ Inovação e
+                tecnologia </span>
+           
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const marqueeContent = document.querySelector('.marquee-content');
+            const text = marqueeContent.innerHTML;
+            marqueeContent.innerHTML = text + text; // Duplicando o texto para continuidade
+        });
+
+    </script>
+</body>
+
+</html>
